@@ -1,3 +1,13 @@
+<!-- 
+
+Repo:
+https://github.com/rarrdeguzman/my-react-app
+
+Site:
+https://rarrdeguzman.github.io/my-react-app/
+
+-->
+
 # React + Vite App Deployment to GitHub Pages
 
 This document summarizes the steps to host a **React + Vite app** on GitHub Pages with **automatic deployment using GitHub Actions**.
