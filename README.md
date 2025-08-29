@@ -131,7 +131,7 @@ git push -u origin main
 
 ---
 
-## 7️⃣ Deployment
+## 7️⃣ Deployment (deployment is automated on push, no manual build needed)
 **Purpose:** Build the app locally and push the build output to GitHub Pages, ensuring the live site is updated.
 ```bash
 npm run build
