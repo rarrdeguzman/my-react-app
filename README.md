@@ -12,9 +12,12 @@ https://rarrdeguzman.github.io/my-react-app/
 
 This document summarizes the steps to host a **React + Vite app** on GitHub Pages with **automatic deployment using GitHub Actions**.
 
+Each section includes the **purpose** of the step.
+
 ---
 
 ## 1️⃣ Project Setup
+**Purpose:** Set up the project structure and install all required dependencies to run a React + Vite application.
 - Create a React + Vite app.
 - Install dependencies:
 
@@ -32,6 +35,7 @@ npm install react-router-dom
 ---
 
 ## 2️⃣ App & Routing
+**Purpose:** Create the main application pages and configure routing to navigate between them, ensuring it works on GitHub Pages.
 - Create pages:  
   - `src/Home.jsx`  
   - `src/About.jsx`  
@@ -61,6 +65,7 @@ export default App;
 ---
 
 ## 3️⃣ Vite Configuration
+**Purpose:** Configure Vite to properly build the app for deployment on GitHub Pages, including the correct base path.
 - `vite.config.js`:
 
 ```js
@@ -76,6 +81,7 @@ export default defineConfig({
 ---
 
 ## 4️⃣ Package.json Scripts
+**Purpose:** Add scripts for building and deploying the app, including automating the deployment process with gh-pages.
 ```json
 "scripts": {
   "dev": "vite",
@@ -93,6 +99,7 @@ export default defineConfig({
 ---
 
 ## 5️⃣ GitHub Repository Setup
+**Purpose:** Initialize Git repository and connect it to GitHub to store your project and enable Actions workflows.
 ```bash
 git init
 git remote add origin https://github.com/<username>/<repo>.git
@@ -106,7 +113,8 @@ git push -u origin main
 ---
 
 ## 6️⃣ GitHub Actions Workflow
-- Workflow file: `.github/workflows/deploy.yml`  
+**Purpose:** Automate building and deploying the app to GitHub Pages every time code is pushed to the main branch.
+- Workflow file: `.github/workflows/deploy.yml`
 - Uses **peaceiris/actions-gh-pages@v3**  
 - Caches `node_modules` for faster builds  
 - Uses **Personal Access Token (PAT)** to avoid 403 errors
@@ -124,6 +132,7 @@ git push -u origin main
 ---
 
 ## 7️⃣ Deployment
+**Purpose:** Build the app locally and push the build output to GitHub Pages, ensuring the live site is updated.
 ```bash
 npm run build
 npm run deploy
@@ -135,6 +144,7 @@ npm run deploy
 ---
 
 ## 8️⃣ Key Lessons
+**Purpose:** Summarize important takeaways for successfully deploying a React + Vite app with CI/CD.
 1. React + Vite on GitHub Pages:
    - `gh-pages` or GitHub Actions for deployment
    - Correct `base` in `vite.config.js`
